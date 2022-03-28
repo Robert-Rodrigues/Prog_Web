@@ -12,6 +12,7 @@
             color: white;
         }
     </style>
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>Teste de Arrays</h1>
@@ -24,72 +25,6 @@
     Digite valor para o índice: <input id="ind" type="text"/>
     <button id="botao4" onclick='inserirind()'>Inserir valor ao índice</button>
     <button id="botao5" onclick='removeind()'>Remover valor do índice</button>
-    <ul id="lista2"></ul>
+    <ol id="lista2"></ol>
     <hr>
 </body>
-<script>
-    let indice = []
-    let vetor = []
-    let valor
-    let texto
-    function insertfim(){
-    valor = parseInt(document.getElementById('num').value);
-    if (isNaN(valor)){
-        window.alert("Não é um número!");
-        exit();}
-        else {
-    vetor.push(valor);
-    valor = document.getElementById('num').value="";
-    valor = document.getElementById('num').focus();
-    lista.innerHTML = "";
-    for (let i = 0;i <vetor.length; ++i) {
-    lista.innerHTML += `<li>${vetor[i]}</li>`;
-    }
-}
-}
-function insertinicio(){
-    valor = parseInt(document.getElementById('num').value);
-    if (isNaN(valor)){  
-        window.alert("Não é um número!");
-        exit();}
-    else {
-    vetor.unshift(valor);
-    valor = document.getElementById('num').value="";
-    valor = document.getElementById('num').focus();
-    lista.innerHTML = "";
-    for (let i = 0;i <vetor.length; ++i) {
-    lista.innerHTML += `<li>${vetor[i]}</li>`;
-    }
-}
-
-}
-function zerarvet(){
-    vetor = document.getElementById('lista');
-    vetor.innerHTML= vetor = [];
-}
-function inserirind(){
-    let valorind = String(document.getElementById('ind').value);
-    if (valorind == null || valorind ==""){
-        alert("Valor inválido.")
-        exit();}
-    else{
-    indice.push(valorind);
-    lista2.innerHTML="";
-    for (let i = 0;i <indice.length; ++i) {
-    lista2.innerHTML += `<li>${indice[i]}</li>`;
-    }
-    valor = document.getElementById('ind').value="";
-    valor = document.getElementById('ind').focus();
-}
-}
-function removeind(){
-    let indicepop = indice.pop();
-    lista2.innerHTML="";
-    for (let i = 0;i <indice.length; ++i) {
-    lista2.innerHTML += `<li>${indice[i]}</li>`;
-    valor = document.getElementById('ind').value="";
-    valor = document.getElementById('ind').focus();
-    }
-}
-</script>
-</html>
