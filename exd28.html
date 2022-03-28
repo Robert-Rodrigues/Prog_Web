@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1F1C1C;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Arrays</h1>
+    Digite um número: <input id="num" type="number"/>
+    <button id="botao1" onclick='insertfim()'>Inserir no final</button>
+    <button id="botao2" onclick='insertinicio()'>Inserir no inicio</button>
+    <button id="botao3" onclick='zerarvet()'>Zerar vetor</button>
+    <ul id="lista"></ul>
+    <hr>
+    Digite valor para o índice: <input id="ind" type="text"/>
+    <button id="botao4" onclick='inserirind()'>Inserir valor ao índice</button>
+    <button id="botao5" onclick='removeind()'>Remover valor do índice</button>
+    <ul id="lista2"></ul>
+    <hr>
+</body>
+<script>
+    let indice = []
+    let vetor = []
+    let valor
+    let texto
+    function insertfim(){
+    valor = parseInt(document.getElementById('num').value);
+    if (isNaN(valor)){
+        window.alert("Não é um número!");
+        exit();}
+        else {
+    vetor.push(valor);
+    valor = document.getElementById('num').value="";
+    valor = document.getElementById('num').focus();
+    lista.innerHTML = "";
+    for (let i = 0;i <vetor.length; ++i) {
+    lista.innerHTML += `<li>${vetor[i]}</li>`;
+    }
+}
+}
+function insertinicio(){
+    valor = parseInt(document.getElementById('num').value);
+    if (isNaN(valor)){  
+        window.alert("Não é um número!");
+        exit();}
+    else {
+    vetor.unshift(valor);
+    valor = document.getElementById('num').value="";
+    valor = document.getElementById('num').focus();
+    lista.innerHTML = "";
+    for (let i = 0;i <vetor.length; ++i) {
+    lista.innerHTML += `<li>${vetor[i]}</li>`;
+    }
+}
+
+}
+function zerarvet(){
+    vetor = document.getElementById('lista');
+    vetor.innerHTML= vetor = [];
+}
+function inserirind(){
+    let valorind = String(document.getElementById('ind').value);
+    if (valorind == null || valorind ==""){
+        alert("Valor inválido.")
+        exit();}
+    else{
+    indice.push(valorind);
+    lista2.innerHTML="";
+    for (let i = 0;i <indice.length; ++i) {
+    lista2.innerHTML += `<li>${indice[i]}</li>`;
+    }
+    valor = document.getElementById('ind').value="";
+    valor = document.getElementById('ind').focus();
+}
+}
+function removeind(){
+    let indicepop = indice.pop();
+    lista2.innerHTML="";
+    for (let i = 0;i <indice.length; ++i) {
+    lista2.innerHTML += `<li>${indice[i]}</li>`;
+    valor = document.getElementById('ind').value="";
+    valor = document.getElementById('ind').focus();
+    }
+}
+</script>
+</html>
