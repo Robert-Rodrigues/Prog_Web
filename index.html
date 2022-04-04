@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Aleatória</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            background-color: #1F1C1C;
+            color: white;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    Digite a quantidade de números aleatórios: <input type="number" id="qtdnum"><br><br>
+    Digite a quantidade de colunas: <input type="number" id="colunas"><br><br>
+    Digite o menor valor do intervalo: <input type="number" id="num1"><br><br>
+    Digite o maior valor do intervalo: <input type="number" id="num2"><br><br>
+    <button onclick="resposta()">GERAR</button>
+    <hr>
+    <pre id="tabela">
+    </pre>
+</body>
+</html>
